@@ -6,7 +6,6 @@ let filterOption = document.querySelector(".filter-todo");
 document.addEventListener("DOMContentLoaded", getLocalTodos);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
-filterOption.addEventListener("change", filterTodo);
 
 function addTodo(event) {
     event.preventDefault();
