@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>To Do List</title>
+    <style>
+        body {
+            background-color: #4b4b4b;
+            color: white;
+            font-family: "Poppins", sans-serif;
+            min-height: 100vh;
+        }
+        header {
+            font-size: 24px;
+        }
+        header, form {
+            min-height: 20vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form input, form button {
+            padding: 8px;
+            padding-left: 16px;
+            font-size: 28.8px;
+            border: none;
+            background: white;
+            border-radius: 32px;
+        }
+        form button {
+            color: rgb(255, 200, 0);
+            background: white;
+            margin-left: 8px;
+        }
+        form button:hover {
+            color: white;
+            background: rgb(255, 200, 0);
+        }
+        .fa-plus-circle {
+            margin-top: 4.8px;
+            margin-left: -8px;
+        }
+        .todo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .todo-list {
+            min-width: 30%;
+            list-style: none;
+        }
+        .todo {
+            margin: 8px;
+            padding-left: 8px;
+            background: white;
+            color: black;
+            font-size: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.5s;
+            border-radius: 32px;
+        }
+        .trash-btn, .complete-btn {
+            color: white;
+            border: none;
+            padding: 16px;
+            font-size: 24px;
+        }
+        .complete-btn {
+            background: rgb(255, 200, 0);
+        }
+        .trash-btn {
+            border-top-right-radius: 28px;
+            border-bottom-right-radius: 28px;
+            background: rgb(171, 171, 171);
+        }
+        .todo-item {
+            padding: 0px 8px;
+        }
+        .fa-trash, .fa-check-circle {
+            pointer-events: none;
+        }
+        .completed {
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+        .slide {
+            transform: translateX(160px);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My To Do List</h1>
+    </header>
+    <form action="">
+        <input type="text" class="todo-input">
+        <button class="todo-button" type="submit">
+            <i class="fas fa-plus-circle fa-lg"></i>
+        </button>
+    </form>    
+
+    <div class="todo-container">
+        <ul class="todo-list"></ul>
+    </div>
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
