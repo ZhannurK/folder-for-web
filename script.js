@@ -1,7 +1,6 @@
 let todoInput = document.querySelector(".todo-input");
 let todoButton = document.querySelector(".todo-button");
 let todoList = document.querySelector(".todo-list");
-let filterOption = document.querySelector(".filter-todo");
 
 document.addEventListener("DOMContentLoaded", getLocalTodos);
 todoButton.addEventListener("click", addTodo);
@@ -9,6 +8,7 @@ todoList.addEventListener("click", deleteCheck);
 
 function addTodo(event) {
     event.preventDefault();
+
     let todoDiv = document.createElement("div");
     todoDiv.classList.add("todo");
     let newTodo = document.createElement("li");
@@ -16,7 +16,6 @@ function addTodo(event) {
     newTodo.classList.add("todo-item");
     todoDiv.appendChild(newTodo);
     
-    //adding to the local storage 
     saveLocalTodos(todoInput.value);
     
     let completedButton = document.createElement("button");

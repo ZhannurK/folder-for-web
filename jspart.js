@@ -1,18 +1,16 @@
-function Sort(){
-    function compareNums(a, b) {
-        return a - b; 
-    }
-
-    function reversedComparison(a, b) {
-        return b - a;
-    }
-
+function Sort() {
     let arr = document.getElementById('Array').value.split(' ').map(Number);
-    arr.sort(compareNums);
-    arr.sort(reversedComparison);
-}
 
+    arr.sort(function(a, b) {
+      return a - b;
+    });
+    document.getElementById('Alan').innerHTML = "Ascending order: " + arr;
 
+    arr.sort(function(a, b) {
+      return b - a;
+    });
+    document.getElementById('Alan').innerHTML += "<br>Descending order: " + arr;
+  }
 
 function calculateTax() {
     let taxRate;
